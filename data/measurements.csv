@@ -1,0 +1,5 @@
+engine_id,rpm,temperature
+ENG-001,3500,420.5
+ENG-002,ERROR,610.0
+ENG-003,3500,-300
+ENG-004,5000,550.0

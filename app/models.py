@@ -8,4 +8,8 @@ class EngineMeasurement:
         return self.rpm >= 0 and self.temperature >= -273.15
 
     def is_overheated(self) -> bool:
-        return self.temperature >= 500 
+        return self.temperature >= 500
+
+    @property
+    def get_engine_id(self) -> str:
+        return self.engine_id 

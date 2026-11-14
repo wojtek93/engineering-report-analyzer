@@ -1,9 +1,30 @@
-from app.models import EngineMeasurement
 from app.loader import Loader
+from app.analysis import EngineAnalyzer
+import json
+import pandas as pd
 
-loadData = Loader("data/measurements.csv")
-measurements = loadData.load_data()
+loader = Loader("data/measurements.csv")
+measurements = loader.load_data()
+
+print(f"Valid measurements: {len(measurements)}")
+print(f"Rejected measurements: {len(loader.errors)}")
+
+with open("data/errors.json", "w", encoding="utf-8") as file:
+    json.dump(loader.errors, file, indent=4)
+
+rows = []
 
 for measurement in measurements:
-    name = measurement.engine_id
-    print(f"{name}: {measurement.is_valid()}")
+    rows.append(vars(measurement))
+
+df = pd.DataFrame(rows)
+
+print(df)
+
+analyzer = EngineAnalyzer(df)
+report = analyzer.generate_report()
+
+print(report)
+
+with open("data/report.json", "w", encoding="utf-8") as file:
+    json.dump(report, file, indent=4)

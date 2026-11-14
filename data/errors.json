@@ -1,0 +1,10 @@
+[
+    {
+        "row": 3,
+        "reason": "invalid literal for int() with base 10: 'ERROR'"
+    },
+    {
+        "row": 4,
+        "reason": "Invalid measurement values"
+    }
+]

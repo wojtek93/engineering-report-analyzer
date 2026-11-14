@@ -1,0 +1,18 @@
+[
+    {
+        "measurement_id": "M-001",
+        "engine_id": "ENG-001",
+        "rpm": 3500,
+        "temperature": 420.5,
+        "thrust_n": 12500,
+        "measured_at": "2026-11-13T10:00:00"
+    },
+    {
+        "measurement_id": "M-002",
+        "engine_id": "ENG-002",
+        "rpm": 5000,
+        "temperature": 550.0,
+        "thrust_n": 15800,
+        "measured_at": "2026-11-13T10:05:00"
+    }
+]

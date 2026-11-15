@@ -14,7 +14,7 @@ def run_cli():
 
     try:
         measurements = loader.load_data()
-    except FileNotFoundError as error:
+    except OSError as error:
         print(f"File error: {error}")
         sys.exit(1)
 

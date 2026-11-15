@@ -10,6 +10,13 @@ class EngineMeasurement:
         self.measured_at = measured_at
 
     def is_valid(self) -> bool:
+
+        if not isinstance(self.engine_id, str) or not self.engine_id.strip():
+            return False
+
+        if not isinstance(self.measured_at, str) or not self.measured_at.strip():
+            return False
+
         if not isinstance(self.measurement_id, str):
             return False
         

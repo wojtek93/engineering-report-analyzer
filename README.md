@@ -23,10 +23,27 @@ The project includes a desktop GUI built with Tkinter, basic statistical analysi
 - Python 3
 - Tkinter support
 
-Install the required Python packages:
+### Setup on macOS / Linux
+
+Create and activate a virtual environment:
 
 ```bash
-pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### Setup on Windows
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
 ```
 
 ## Running the application
